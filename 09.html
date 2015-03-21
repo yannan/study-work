@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>单一按钮显示/隐藏</title>
+    <style>
+        body,div {
+            margin:0;
+            padding:0;
+        }
+        body {
+            font:12px/1.5 Tahoma;
+        }
+        #outer {
+            width:200px;
+            margin:10px auto;
+            border:1px solid #aaa;
+        }
+        #outer h2 {
+            background: #ced3d7;
+            color:#57646E;
+            cursor: pointer;
+            font-weight: 400;
+            font-size: 14px;
+            height:30px;
+            border:1px solid #fff;
+            line-height: 30px;
+            padding-left: 10px;
+            margin:0;
+        }
+        #outer ul {
+            border:1px solid #DEE3E6;
+            padding-left:0;
+            margin:0;
+            display: none;
+        }
+        #outer li {
+            list-style-type: none;
+            height:25px;
+            line-height: 25px;
+            vertical-align: top;
+            background: #e9edf2;
+        }
+        #outer a {
+            text-decoration: none;
+            padding:0 10px;
+            display: block;
+            color:#6b7980;
+
+        }
+        #outer a:hover {
+            background: #fff;
+            text-decoration: underline;
+        }
+    </style>
+    <script type="application/javascript">
+        window.onload = function()
+        {
+            var oUl = document.getElementById("outer").getElementsByTagName("ul")[0];
+            var oH2 = document.getElementById("outer").getElementsByTagName("h2")[0];
+            oH2.onclick = function()
+            {
+                oUl.style.display = oUl.style.display == "none" ? "block" : "none";
+            }
+
+        }
+    </script>
+</head>
+<body>
+    <div id = "outer">
+        <h2>播放列表...</h2>
+        <ul>
+            <li><a href = "javascript:;">aaaaaaa</a></li>
+            <li><a href = "javascript:;">aaaaaaa</a></li>
+            <li><a href = "javascript:;">aaaaaaa</a></li>
+            <li><a href = "javascript:;">aaaaaaa</a></li>
+            <li><a href = "javascript:;">aaaaaaa</a></li>
+            <li><a href = "javascript:;">aaaaaaa</a></li>
+        </ul>
+
+    </div>
+</body>
+</html>
